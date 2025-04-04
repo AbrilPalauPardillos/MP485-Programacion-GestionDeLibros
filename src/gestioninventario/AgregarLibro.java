@@ -178,30 +178,12 @@ public class AgregarLibro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnAgregarLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAgregarLibroActionPerformed
-        /**/
-        String titulo = jTxtTitulo;
-        ArrayList<String> autores = jTxtAutor;
-        double precio = jTxtPrecio;
-        String ISBN = jTxtISBN;
-        int cantidad = jTxtCantidad;
+        String titulo = jTxtTitulo.getText();
+        double precio = Double.parseDouble(jTxtPrecio.getText());
+        int cantidad = Integer.parseInt(jTxtCantidad.getText());
+        String autor = jTxtAutor.getText();
+        String ISBN = jTxtISBN.getText();
 
-        Libro l = new Libro(titulo, autores, precio, ISBN, cantidad);
-        // si no existe -> añadir libro al archivo // pero si existe -> mensaje de error que indique que existe.
-        if (!l.equals(l)) {
-            try {
-                FileManager.writeFile();
-                FileWriter fw = new FileWriter(archivo);
-                BufferedWriter bw = new BufferedWriter(fw); 
-                bw.write(l);
-                bw.flush();
-                bw.close();
-            } catch (IOException ex) {
-                Logger.getLogger(AgregarLibro.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-        } else {
-            jLblErrorAgregar.setText("Este Libro ya existe");
-        }
     }//GEN-LAST:event_jBtnAgregarLibroActionPerformed
 
     private void jBtnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAtrasActionPerformed

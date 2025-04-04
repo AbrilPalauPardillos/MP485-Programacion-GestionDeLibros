@@ -35,6 +35,7 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jBtnAgregar.setBackground(new java.awt.Color(204, 204, 255));
+        jBtnAgregar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBtnAgregar.setText("AGREGAR LIBRO");
         jBtnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,6 +44,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jBtnActualizar.setBackground(new java.awt.Color(204, 204, 255));
+        jBtnActualizar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBtnActualizar.setText("ACTUALIZAR LIBRO");
         jBtnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +53,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jBtnEliminar.setBackground(new java.awt.Color(204, 204, 255));
+        jBtnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBtnEliminar.setText("ELIMINAR LIBRO");
         jBtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +61,8 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jBtnSalir.setBackground(new java.awt.Color(204, 204, 255));
+        jBtnSalir.setBackground(new java.awt.Color(153, 153, 255));
+        jBtnSalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBtnSalir.setText("SALIR INVENTARIO");
         jBtnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +71,6 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jLblOpcion.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLblOpcion.setForeground(new java.awt.Color(0, 102, 153));
         jLblOpcion.setText("SELECCIONE UNA OPCION");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -75,36 +78,35 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jLblOpcion))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jBtnAgregar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnAgregar)
-                            .addComponent(jBtnEliminar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnActualizar)
-                            .addComponent(jBtnSalir)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLblOpcion)
-                        .addGap(60, 60, 60)))
-                .addGap(20, 20, 20))
+                            .addComponent(jBtnSalir)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jBtnActualizar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jBtnEliminar)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(19, 19, 19)
                 .addComponent(jLblOpcion)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnAgregar)
-                    .addComponent(jBtnActualizar))
-                .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnEliminar)
-                    .addComponent(jBtnSalir))
-                .addContainerGap(99, Short.MAX_VALUE))
+                    .addComponent(jBtnActualizar)
+                    .addComponent(jBtnEliminar))
+                .addGap(18, 18, 18)
+                .addComponent(jBtnSalir)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -131,6 +133,7 @@ public class Menu extends javax.swing.JFrame {
     private void jBtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarActionPerformed
         EliminarLibro eliminar = new EliminarLibro();
         eliminar.setVisible(true);
+        
         this.setVisible(false);
     }//GEN-LAST:event_jBtnEliminarActionPerformed
 

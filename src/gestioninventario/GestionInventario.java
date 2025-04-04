@@ -22,6 +22,7 @@ public class GestionInventario {
          // Inicializar el gestor de archivos
         FileManager.startFilesManager();
         
+        // TAN PUNTO DE AL PLAY --> SE ABRA LA INTERFAZ DE MENU
         Menu menu = new Menu();
         menu.setVisible(true);
         
