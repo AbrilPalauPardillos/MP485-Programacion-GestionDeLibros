@@ -183,7 +183,8 @@ public class AgregarLibro extends javax.swing.JFrame {
         int cantidad = Integer.parseInt(jTxtCantidad.getText());
         String autor = jTxtAutor.getText();
         String ISBN = jTxtISBN.getText();
-
+        
+        
     }//GEN-LAST:event_jBtnAgregarLibroActionPerformed
 
     private void jBtnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAtrasActionPerformed

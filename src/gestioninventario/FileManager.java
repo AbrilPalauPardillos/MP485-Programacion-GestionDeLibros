@@ -56,10 +56,10 @@ public class FileManager {
         br.close();
     }
 
-    public static void writeFile() throws IOException {
+    public static void writeFile(String titulo,ArrayList<String>autores,double precio,String ISBN,int cantidadEnInventario) throws IOException {
         FileWriter fw = new FileWriter(archivo); //Stream conectado al fichero a escribir.
         BufferedWriter bw = new BufferedWriter(fw); //Buffer que almacena datos hacia el stream
-        bw.write("Nuevo texto"); //guarda los datos en el buffer
+        bw.write(titulo + " ; " + autores + " ; " + precio + " ; " + ISBN + " ; " + cantidadEnInventario); //guarda los datos en el buffer
         bw.flush(); //envia los datos que queden al buffer
         bw.close();
     }
